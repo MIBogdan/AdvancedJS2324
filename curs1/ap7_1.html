@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class Jucator {
+            constructor (nume, numar, pozitie, varsta) {
+                this.nume = nume;
+                this.numar = numar;
+                this.pozitie = pozitie;
+                this.varsta = varsta;
+            }
+
+            alergare() {
+                console.log(`${this.nume} alearga foarte mult.`);
+            }
+
+            inscrieGol() {
+                if (this.pozitie == 'atacant') {
+                console.log(`${this.nume} marcheaza goluri des.`);
+                } else if (this.pozitie == 'portar') {
+                    console.log(`${this.nume} marcheaza rar.`)
+                }
+            } 
+        }
+
+        const jucator1 = new Jucator("Messi", 10, "atacant", 35);
+        const jucator2 = new Jucator("Ronaldo", 10, "portar", 35);
+        jucator1.alergare();
+        jucator1.inscrieGol();
+
+        jucator2.alergare();
+        jucator2.inscrieGol();
+
+    </script>
+</body>
+</html>
