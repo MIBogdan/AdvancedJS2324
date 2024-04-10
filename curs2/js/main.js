@@ -1,4 +1,4 @@
-import {Carte} from '../../curs1/Carte.js';
+import Carte from '../../curs1/carte.js';
 
 
 //  import * from " demo.js"

@@ -12,7 +12,6 @@ class Canvas {
     create() {
       if(this.ctx !== null) {
         console.log('Canvas already created!');
-        return;
       } else {
         let divWrapper = document.createElement('div');
         let canvasElem = document.createElement('canvas');
@@ -30,7 +29,6 @@ class Canvas {
     createReportList() {
       if(this.listId !== null) {
         console.log('Report list already created!');
-        return;
       } else {
         let list = document.createElement('ul');
         list.id = this.id + '-reporter';
