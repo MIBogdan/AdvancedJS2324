@@ -14,11 +14,14 @@
             constructor(_name, _title) {
                 this.name = _name;
                 this.title = _title;
+                if (this.constructor == Person) {
+                    throw new Error(" Object of Abstract Class cannot be created");
+                }
             }
 
             //public
-            getName = function () {
-                return this.name;
+            getName() {
+                throw new Error("Abstract Method has no implementation");
             }
 
 
@@ -30,7 +33,14 @@
 
         }
 
-        const person = new Person('Ion', 'Web developer');
+        class Demo extends Person {
+            getName() {
+                return this.name
+            }
+        }
+
+        // const person1 = new Person('Ion', 'Web Developer');
+        const person = new Demo('Ion', 'Web developer');
         console.log(person.getName())
         //Ion
 

@@ -16,18 +16,18 @@
       }
 
       sayHi() {
-        console.log(`Hi! My name is ${name}`)
+        console.log(`Hi! My name is ${this.name}`)
       }
     }
-    class Developer extends Human() {
+    class Developer extends Human {
       sayHi() {
-        console.log(`Hi! My name is ${name}. I am a developer.`)
+        console.log(`Hi! My name is ${this.name}. I am a developer.`)
       }
     }
 
-    class Designer extends Human() {
+    class Designer extends Human {
       sayHi() {
-        console.log(`Hi! My name is ${name}. I am a designer.`)
+        console.log(`Hi! My name is ${this.name}. I am a designer.`)
       }
     }
     const adam = new Human('Adam')
