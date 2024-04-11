@@ -11,25 +11,53 @@
         class Persoana {
             nume;
             prenume;
-
+            #contBancar;
             constructor(fname, lname) {
                 this.nume = fname;
                 this.prenume = lname;
             }
 
+            set contBancar(cont) {
+                if (cont.length == 14) {
+                    this.#contBancar = cont;
+                } else {
+                    throw "Eroare cont bancar";
+                }
+                
+            } 
+            get contBancar() {
+                return this.#contBancar
+            }
+
             salut() {
-                console.log(`Buna ziua, eu sunt ${this.nume} ${this.prenume}`);
+                return console.log(`Buna ziua, eu sunt ${this.nume} ${this.prenume}`);
+                
             }
         }
 
         class Student extends Persoana {
-
+            facultate;
+            constructor(fname, lname, facultate) {
+                super(fname, lname);
+                this.facultate = facultate;
+            }
+            salut() {
+                super.salut()
+                console.log(`Sunt la facultatea ${this.facultate}`)
+            }
         }
 
         let persoana1 = new Persoana("Ana", "Popescu");
-        persoana1.salut()
+        persoana1.salut();
+        persoana1.contBancar = "RO123456789101"
+        console.log("Contul bancar este", persoana1.contBancar);
+        console.log(persoana1);
 
-        let studen1 = new Student();
+        let student1 = new Student("Ion", "Popescu", "Titu Maiorescu");
+        student1.salut();
+        student1.contBancar = "123456789101RO"
+        console.log(student1);
+        
     </script>
 </body>
 </html>

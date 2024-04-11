@@ -55,9 +55,9 @@
                 this.services.push(service);
             }
             getUserInfo(){
-                console.log(` Nume abonat ${this.name} varsa ${this.age} sold ${this.soldCard} `);
+                console.log(` Nume abonat ${this.name} varsta ${this.age} sold ${this.soldCard} `);
                 //console.log(` Nume abonat ${this._name} varsa ${this._age} sold ${this.#soldCard}`); //Error
-                console.log(` Nume abonat ${this._name} varsa ${this.age} sold ${this.getSold()}`);
+                console.log(` Nume abonat ${this._name} varsta ${this.age} sold ${this.getSold()}`);
            
             }
         }
@@ -75,6 +75,8 @@
         abonat.name = 'Ionel';
         console.log(abonat.name); // Ionel 
         abonat.getUserInfo();
+        abonat.services.push("TV");
+        console.log(abonat);
 
     </script>
 </body>
