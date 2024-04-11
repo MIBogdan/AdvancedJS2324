@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Persoana {
+            nume;
+            prenume;
+
+            constructor(fname, lname) {
+                this.nume = fname;
+                this.prenume = lname;
+            }
+
+            salut() {
+                console.log(`Buna ziua, eu sunt ${this.nume} ${this.prenume}`);
+            }
+        }
+
+        class Student extends Persoana {
+
+        }
+
+        let persoana1 = new Persoana("Ana", "Popescu");
+        persoana1.salut()
+
+        let studen1 = new Student();
+    </script>
+</body>
+</html>
