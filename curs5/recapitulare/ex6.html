@@ -23,18 +23,32 @@
 
     <script>
         class Person{
+            name;
+            #age;
             constructor(name, age){
                 this.name = name;
-                this.age = age;
+                this.#age = age;
             }
+            set age (newAge) {
+                this.#age = newAge;
+            }
+            get age() {
+                return this.#age;
+            }
+
             describe(){
-                return `${this.name} are ${this.age} ani`;
+                return `${this.name} are ${this.#age} ani`;
             }
         }
         var dan = new Person("Dan", 19);
         var ion = new Person("Ion", 24);
+        var ana = new Person("Ana", 25);
         console.log(dan.describe());
+        
         console.log(ion.describe());
+        console.log(ana.describe());
+        ana.age = 23;
+        console.log(ana.describe());
     </script>
     
 </body>

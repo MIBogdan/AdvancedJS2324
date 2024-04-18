@@ -36,14 +36,18 @@
         const person = {
             name: "Dan",
             age: 30,
-            job: "Software Developer",
-            country: "Nigeria",
-            car: "Ford",
+            job: {
+                role: "Software Developer"},
+
+            country: {
+                name: "Nigeria"},
+            car: {
+                name:"Ford"},
             description: function () {
                 return `${this.name} - ${this.age} - ${this.job.role} - ${this.country.name} - ${this.car.name}`;
             },
         };
-        console.log(person.description);
+        console.log(person.description());
     </script>
 </body>
 

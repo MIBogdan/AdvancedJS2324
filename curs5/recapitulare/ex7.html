@@ -25,17 +25,29 @@
 
     <script>
         class Vehicle {
+            #type;
+            color;
+            #brand;
+            year;
+            static wheels = 4;
             constructor(type, color, brand, year) {
                 this.type = type;
                 this.color = color;
                 this.brand = brand;
                 this.year = year;
             }
+
+            get type() { return this.#type; }
+            set type(value) { this.#type = value; }
+
+            get brand() { return this.#brand; }
+            set brand(value) { this.#brand = value; }
+
             start() {
                 return "Vehicle started";
             }
             stop() {
-                return "Vehicle stopped";
+                return `Vehicle stopped`;
             }
             pickUpPassengers() {
                 return "Passengers picked up";
@@ -44,13 +56,16 @@
                 return "Passengers dropped off";
             }
             info(){
-                return `Vehicle info ${this.type} ${this.brand} ${this.year} ${this.color}`;
+                return `Vehicle info ${this.type} ${this.brand} ${this.year} ${this.color} ${Vehicle.wheels}`;
             }
         }
         const vehicle1 = new Vehicle("car", "red", "Ford", 2015);
+        vehicle1.type = "boat";
+        vehicle1.brand = "i don't know any boat brands";
         const vehicle2 = new Vehicle("motorbike", "blue", "Honda", 2018);
         console.log(vehicle1.info());
         console.log(vehicle1.start());
+        
         console.log(vehicle2.pickUpPassengers()); 
     </script>
 </body>

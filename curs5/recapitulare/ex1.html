@@ -29,7 +29,7 @@
                 fname: 'Ion',
             lname: 'Popescu'
         };
-        const copy1  = user;  
+        const copy1  = {...user};  
         const copy2 = Object.assign({}, user);
         copy1.fname ='Dan';
         copy2.lname ='Ana';

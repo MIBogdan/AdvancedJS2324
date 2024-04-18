@@ -52,8 +52,8 @@
         }
 
         class Rectangle extends Shape {
-            constructor( width, height) {
-                // super(color);
+            constructor(color, width, height) {
+                super(color);
                 this.width = width;
                 this.height = height;
             }
@@ -63,7 +63,7 @@
             }
         }
 
-        let rectangle = new Rectangle('red', 5, 8);
+        let rectangle = new Rectangle("blue", 5, 8);
         console.log("Area:" + rectangle.getArea());
        // console.log("Color:" + rectangle.getColor());
        // console.log("toString:" + rectangle.toString());
