@@ -63,14 +63,14 @@ $(document).ready(function ($) {
             url: 'http://localhost:3001/users/1652778027417'
         });
 
-        ajxReq.success(function (data, status, jqXhr) {
-            $("#message").append("Request is Success.");
+        // ajxReq.success(function (data, status, jqXhr) {
+        //     $("#message").append("Request is Success.");
 
-        });
-        ajxReq.error(function (jqXhr, textStatus, errorMessage) {
-            alert(errorMessage);
-            $("#message").append("Request is Fail.");
-        });
+        // });
+        // ajxReq.error(function (jqXhr, textStatus, errorMessage) {
+        //     alert(errorMessage);
+        //     $("#message").append("Request is Fail.");
+        // });
 
 
     });
@@ -87,14 +87,14 @@ $(document).ready(function ($) {
             url: 'http://localhost:3001/users'
         });
 
-        ajxReq.success(function (data, status, jqXhr) {
-            $("#message").append("Request is Success.");
+        // ajxReq.success(function (data, status, jqXhr) {
+        //     $("#message").append("Request is Success.");
 
-        });
-        ajxReq.error(function (jqXhr, textStatus, errorMessage) {
-            alert(errorMessage);
-            $("#message").append("Request is Fail.");
-        });
+        // });
+        // ajxReq.error(function (jqXhr, textStatus, errorMessage) {
+        //     alert(errorMessage);
+        //     $("#message").append("Request is Fail.");
+        // });
 
 
     });
@@ -112,14 +112,21 @@ $(document).ready(function ($) {
             url: 'http://localhost:3001/users/1'
         });
 
-        ajxReq.success(function (data, status, jqXhr) {
-            $("#message").append("Request is Success.");
+        // // ajxReq ({
+        // //     success: function (data, status, jqXhr) {
+        // //     $("#message").append("Request is Success.");
+        // //     }
+        // // });
 
-        });
-        ajxReq.error(function (jqXhr, textStatus, errorMessage) {
-            alert(errorMessage);
-            $("#message").append("Request is Fail.");
-        });
+        // ajxReq ({
+        //     success: function (data, status, jqXhr) { 
+        //         $("#message").append("Request is Success.");
+        //     }
+        // });
+        // ajxReq.error(function (jqXhr, textStatus, errorMessage) {
+        //     alert(errorMessage);
+        //     $("#message").append("Request is Fail.");
+        // });
 
 
     });
