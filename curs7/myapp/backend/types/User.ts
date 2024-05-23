@@ -9,6 +9,7 @@ export interface BasicUser {
     telefon: string,
     dataadaugare?:Date,
     inaltime: string,
+    poza?:string,
     actiune?:string
   }
   export interface UserWithDetails extends BasicUser, User{

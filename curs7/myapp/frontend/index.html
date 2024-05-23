@@ -26,24 +26,26 @@
                 <table id="example" class="display" style="width:100%">
                     <thead>
                         <tr>
-                            <th>First name</th>
-                            <th>Last name</th>
-                            <th>Position</th>
-                            <th>Office</th>
-                            <th>Start date</th>
-                            <th>Salary</th>
-                            <th>Salary</th>
+                            <th>ID</th>
+                            <th>Nume</th>
+                            <th>Prenume</th>
+                            <th>Email</th>
+                            <th>Telefon</th>
+                            <th>Data Nastere</th>
+                            <th>Inaltime</th>
+                            <th>Actiune</th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
-                            <th>First name</th>
-                            <th>Last name</th>
-                            <th>Position</th>
-                            <th>Office</th>
-                            <th>Start date</th>
-                            <th>Salary</th>
-                            <th>Salary</th>
+                            <th>ID</th>
+                            <th>Nume</th>
+                            <th>Prenume</th>
+                            <th>Email</th>
+                            <th>Telefon</th>
+                            <th>Data Nastere</th>
+                            <th>Inaltime</th>
+                            <th>Actiune</th>
                         </tr>
                     </tfoot>
                 </table>
@@ -59,7 +61,7 @@
                     <h4 class="modal-title" id="userModel"></h4>
                 </div>
                 <div class="modal-body">
-                    <form action="javascript:void(0)" id="userInserUpdateForm" name="userInserUpdateForm"
+                    <form action="javascript:void(0)" enctype="multipart/form-data" id="userInserUpdateForm" name="userInserUpdateForm"
                         class="form-horizontal needs-validation" method="POST" novalidate>
                         <input type="hidden" name="id" id="id">
                         <div class="form-group">
@@ -112,6 +114,30 @@
                                       </div>
                             </div>
                         </div>
+
+                        <div class="form-group">
+                            <label for="inaltime" class="col-sm-2 control-label">Inaltime</label>
+                            <div class="col-sm-12">
+                                <input type="number" class="form-control" id="inaltime" name="inaltime"
+                                    placeholder="Enter Height" value="" required>
+                                    <div class="invalid-feedback">
+                                        Acest camp este obligatoriu!
+                                      </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="poza" class="col-sm-2 control-label">Poza</label>
+                            <div class="col-sm-12">
+                                <input type="file" class="form-control" id="poza" name="poza"
+                                    placeholder="No file chosen" value="" required>
+                                    <div class="invalid-feedback">
+                                        Acest camp este obligatoriu!
+                                      </div>
+                            </div>
+                        </div>
+
                         <div class="col-sm-offset-2 col-sm-10">
                             <button type="submit" class="btn btn-primary" id="btn-save" value="addNewUser">Trimite
                                 datele
